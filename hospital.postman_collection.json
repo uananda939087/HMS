@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "eaa00308-4d4e-45d0-925a-51c05a647ce1",
+		"name": "hospital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26215268"
+	},
+	"item": [
+		{
+			"name": "book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hospitalName\":\"LifePoint\",\r\n    \"doctorName\":\"Rahul\",\r\n    \"appointmentDate\":\"05-05-2023\",\r\n    \"appointmentTime\":\"16:30\",\r\n    \"timeRequired\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book with same date doctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hospitalName\":\"LifePoint\",\r\n    \"doctorName\":\"rahul\",\r\n    \"appointmentDate\":\"05-05-2023\",\r\n    \"appointmentTime\":\"17:00\",\r\n    \"timeRequired\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book with same date diff doctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hospitalName\":\"LifePoint\",\r\n    \"doctorName\":\"Naresh\",\r\n    \"appointmentDate\":\"05-05-2023\",\r\n    \"appointmentTime\":\"17:00\",\r\n    \"timeRequired\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book doctor name not exists",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hospitalName\":\"LifePoint\",\r\n    \"doctorName\":\"Deva\",\r\n    \"appointmentDate\":\"04-05-2023\",\r\n    \"appointmentTime\":\"17:00\",\r\n    \"timeRequired\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book hospital name not exists",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hospitalName\":\"Care\",\r\n    \"doctorName\":\"Naresh\",\r\n    \"appointmentDate\":\"04-05-2023\",\r\n    \"appointmentTime\":\"17:00\",\r\n    \"timeRequired\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book weekend",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hospitalName\":\"LifePoint\",\r\n    \"doctorName\":\"Naresh\",\r\n    \"appointmentDate\":\"07-05-2023\",\r\n    \"appointmentTime\":\"17:00\",\r\n    \"timeRequired\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book lessthan now",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hospitalName\":\"LifePoint\",\r\n    \"doctorName\":\"Naresh\",\r\n    \"appointmentDate\":\"07-05-2023\",\r\n    \"appointmentTime\":\"17:00\",\r\n    \"timeRequired\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allbooked",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/allbooked",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"allbooked"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
